@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow: hidden;
+}
+
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px;
+}
+.animate{
+    
+    animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+#background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url('https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: contain;
+    background-position: center;
+
+}
+#circle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    pointer-events: none;
+}
+#wrapper h1{
+    font-size: 500px;
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 800;
+}
+#whitestrip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53%;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+#blackcard{
+    width: 170px;
+    height: 230px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#blackcard p{
+    color: #FFF;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 18px;
+
+}
+#linelem {
+    display: flex;
+    align-items: center;
+}
+
+#linelem .line{
+    width: 200px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 30px;
+
+}
+#linelem h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    
+}
+#linelem i{
+    cursor: pointer;
+}
+#background>h5{
+    position: absolute;
+    color: #FFF;
+    top: 50%;
+    font-family: "montserrat";
+    left: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 8px;
+    font-size: 10px;
+    transform: rotate(-90deg);
+}
+@keyframes animation {
+    to{
+        stroke-dasharray: 470px;
+    }
+}
